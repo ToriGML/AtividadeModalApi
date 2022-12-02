@@ -1,0 +1,68 @@
+<h1>------------Aula-1------------</h1>
+
+<button (click)="adicionarFotos()">adicionar fotos</button>
+<button (click)="mostrarFotos()">mostrar fotos</button>
+
+<br>
+<br>
+
+<div *ngFor="let foto of fotos">
+
+    <input type="file" [(ngModel)]="foto.arquivo">
+
+</div>
+
+<br>
+<br>
+
+<strong>Opções interessantes: </strong>
+<select [(ngModel)]='teste'>
+  <option value="{{item}}" *ngFor="let item of listaDeTestes; index as i">{{item}}</option>
+</select>
+
+<br>
+<br>
+
+<p *ngIf="isUno(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
+<p *ngIf="isDuno(); else elseMan" [style.background-color]="escolherCor()"style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
+<p *ngIf="isTri(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
+<p *ngIf="isFour(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
+
+<ng-template #elseMan>
+  <p style="background-color:rgb(207, 207, 207); color:rgb(0, 0, 0); width:20%; text-align: center;">----------------------</p>
+</ng-template>
+
+<br>
+<br>
+
+<botao (clicado)="fuiClicado()">
+
+</botao>
+
+<br>
+<br>
+
+<meu-input [(valor)]="appValor">
+  <p>
+  {{appValor}}
+</p>
+</meu-input>
+
+<h1>------------Modal-------------</h1>
+
+<div>
+<modal #modal>
+  <div class="tudo">
+  <select [(ngModel)]="carta">
+    <option *ngFor="let carta of deck">
+      {{carta.name}}
+    </option>
+  </select>
+  <button (click)="verify()">Verify</button>
+</div>
+<br>
+  <div>
+    <img src="{{imagem_carta}}" width="300" height="380">
+  </div>
+  </modal>
+</div>

@@ -1,0 +1,39 @@
+.modal {
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #333;
+    width: 320px;
+    position: fixed;
+    left: 50%;
+    padding: 24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+  }
+  
+  .fundo {
+    background: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .fechar{
+    position: absolute;
+    cursor: pointer;
+    background-color: crimson;
+    border-radius: 50%;
+    margin-left: 90%;
+    margin-top: -115%;
+  }
+
+  .botao{
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }

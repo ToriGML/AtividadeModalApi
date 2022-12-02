@@ -1,0 +1,10 @@
+<button src="#abrirModal" (click)="abrirEfechar()" class="botao">Abrir modal</button>
+
+<ng-container *ngIf="abrirModal" class="abrirModal">
+    <div class="modal">
+        <ng-content></ng-content>
+        <button (click)="abrirEfechar()" class="fechar">x</button>
+    </div>
+    <div class="fundo"></div>
+</ng-container>
+    
