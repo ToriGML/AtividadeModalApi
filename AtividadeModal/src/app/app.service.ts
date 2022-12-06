@@ -11,7 +11,7 @@ export class AppService {
     ){ }
 
     getOlaMundo(): Observable<any> {
-        return this.httpClient.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?&startdate=01/01/2000&enddate=08/23/2002&dateregion=tcg_date')
+        return this.httpClient.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?banlist=tcg&level=4&sort=name')
     }
 
  }

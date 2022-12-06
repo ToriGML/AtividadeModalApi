@@ -1,68 +1,25 @@
-<h1>------------Aula-1------------</h1>
-
-<button (click)="adicionarFotos()">adicionar fotos</button>
-<button (click)="mostrarFotos()">mostrar fotos</button>
-
-<br>
-<br>
-
-<div *ngFor="let foto of fotos">
-
-    <input type="file" [(ngModel)]="foto.arquivo">
-
+<div class="logo">
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ecd51263-bb0f-4465-af86-f7ed25e58e70/degn1d8-963da678-da92-4dbd-acc5-8c9e9a9b34e2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VjZDUxMjYzLWJiMGYtNDQ2NS1hZjg2LWY3ZWQyNWU1OGU3MFwvZGVnbjFkOC05NjNkYTY3OC1kYTkyLTRkYmQtYWNjNS04YzllOWE5YjM0ZTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HSiLqBk_Qlby8vbuIwv0M7MLx3jkoGsv8N45zDQ_Tg8" 
+  width="500" height="140">
 </div>
-
-<br>
-<br>
-
-<strong>Opções interessantes: </strong>
-<select [(ngModel)]='teste'>
-  <option value="{{item}}" *ngFor="let item of listaDeTestes; index as i">{{item}}</option>
-</select>
-
-<br>
-<br>
-
-<p *ngIf="isUno(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
-<p *ngIf="isDuno(); else elseMan" [style.background-color]="escolherCor()"style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
-<p *ngIf="isTri(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
-<p *ngIf="isFour(); else elseMan" [style.background-color]="escolherCor()" style="color:aliceblue; width:20%; text-align: center;">{{teste}}</p>
-
-<ng-template #elseMan>
-  <p style="background-color:rgb(207, 207, 207); color:rgb(0, 0, 0); width:20%; text-align: center;">----------------------</p>
-</ng-template>
-
-<br>
-<br>
-
-<botao (clicado)="fuiClicado()">
-
-</botao>
-
-<br>
-<br>
-
-<meu-input [(valor)]="appValor">
-  <p>
-  {{appValor}}
-</p>
-</meu-input>
-
-<h1>------------Modal-------------</h1>
-
-<div>
+<div class="A-carta">
 <modal #modal>
   <div class="tudo">
-  <select [(ngModel)]="carta">
-    <option *ngFor="let carta of deck">
+  <select [(ngModel)]="cartaId" class="carta">
+    <option *ngFor="let carta of deck" value="{{carta.id}}">
       {{carta.name}}
     </option>
   </select>
-  <button (click)="verify()">Verify</button>
+  <button (click)="verify()" class="botao">Verify</button>
 </div>
 <br>
-  <div>
-    <img src="{{imagem_carta}}" width="300" height="380">
+  <div class="imagem">
+    <img src="{{imagem_carta}}" width="300" height="420">
   </div>
   </modal>
 </div>
+
+<img src="https://www.clipartmax.com/png/full/116-1169119_millennium-history-clipart-yugioh-millenium-puzzle.png" width="220" height="200" class="milleniumPuzzle">
+<img src="https://www.clipartmax.com/png/full/116-1169119_millennium-history-clipart-yugioh-millenium-puzzle.png" width="220" height="200" class="milleniumPuzzle2">
+
+<style> @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap'); </style>
